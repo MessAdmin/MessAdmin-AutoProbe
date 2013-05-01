@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment id="MessAdmin" version="3.0"
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
+		metadata-complete="true">
+		<!-- metadata-complete="true" is important here as it prevents annotation processings in this jar -->
+
+	<display-name>MessAdmin (Java EE 6)</display-name>
+	<description>web.xml fragment (Servlet 3) for MessAdmin</description>
+
+	<!--ordering>
+		<before><others/></before>
+	</ordering-->
+
+	<filter>
+		<!-- MessAdmin Servlet Filter -->
+		<filter-name>MessAdminFilter</filter-name>
+		<filter-class>clime.messadmin.core.autoprobe.MessAdminFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MessAdminFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<!--dispatcher>FORWARD</dispatcher-->
+		<!--dispatcher>INCLUDE</dispatcher-->
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+
+	<!-- Note: no MessAdmin listener, as it is declared via the TLD mechanism -->
+	<!--listener>
+		<listener-class>clime.messadmin.core.MessAdminListener</listener-class>
+	</listener-->
+
+</web-fragment>

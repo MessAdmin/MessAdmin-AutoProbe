@@ -6,6 +6,7 @@
 		metadata-complete="true">
 		<!-- metadata-complete="true" is important here as it prevents annotation processings in this jar -->
 
+	<name>MessAdmin</name>
 	<display-name>MessAdmin (Java EE 6)</display-name>
 	<description>web.xml fragment (Servlet 3) for MessAdmin</description>
 

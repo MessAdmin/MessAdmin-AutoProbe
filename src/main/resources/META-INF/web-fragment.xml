@@ -4,7 +4,7 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd"
 		metadata-complete="true">
-		<!-- metadata-complete="true" is important here as it prevents annotation processings in this jar -->
+		<!-- metadata-complete="true" is important here as it prevents annotation processing in this jar -->
 
 	<name>MessAdmin</name>
 	<display-name>MessAdmin (Java EE 6)</display-name>
